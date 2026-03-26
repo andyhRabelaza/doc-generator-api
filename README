@@ -28,7 +28,7 @@ Service de génération de documents (CERFA, conventions) capable de traiter des
 
 1. Cloner le repo :
 ```bash
-git clone <ton_repo_url>
+git clone doc-generator-api
 cd doc-generator-api
 
 docker-compose up --build
