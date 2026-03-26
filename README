@@ -11,10 +11,6 @@ Service de génération de documents (CERFA, conventions) capable de traiter des
 - **Prometheus / Grafana** : métriques et monitoring
 - **Swagger/OpenAPI** : documentation API
 
-### Diagramme de séquence (Batch Processing)
-
-
-
 ## Endpoints
 | Méthode | Endpoint | Description |
 |---------|---------|-------------|
