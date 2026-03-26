@@ -1,0 +1,43 @@
+{
+  "name": "doc-generator-api",
+  "version": "1.0.0",
+  "description": "API Node.js pour génération de documents batch",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "bullmq": "^2.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "ioredis": "^5.3.2",
+    "mongoose": "^7.5.1",
+    "p-queue": "^9.1.0",
+    "pdf-lib": "^1.17.1",
+    "pino": "^10.3.1",
+    "pino-pretty": "^13.1.3",
+    "prom-client": "^15.1.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "@types/p-queue": "^3.1.0",
+    "@types/pino": "^7.0.4",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "@types/uuid": "^9.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.2"
+  }
+}

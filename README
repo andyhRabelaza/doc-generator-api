@@ -1,0 +1,34 @@
+# Doc Generator API – Test Technique Backend Node.js
+
+## Description
+Service de génération de documents (CERFA, conventions) capable de traiter des lots de 1000 documents en parallèle, avec résilience, monitoring et API documentée.
+
+## Architecture
+- **Node.js + TypeScript + Express** : API principale
+- **Bull + Redis** : gestion des queues et traitement parallèle
+- **MongoDB + GridFS** : stockage des documents PDF
+- **Worker Threads** : génération PDF optimisée
+- **Prometheus / Grafana** : métriques et monitoring
+- **Swagger/OpenAPI** : documentation API
+
+### Diagramme de séquence (Batch Processing)
+
+
+
+## Endpoints
+| Méthode | Endpoint | Description |
+|---------|---------|-------------|
+| POST    | /api/documents/batch | Lancer la génération d’un batch de 1000 documents, retourne batchId |
+| GET     | /api/documents/batch/:batchId | Statut du batch et documents générés |
+| GET     | /api/documents/:documentId | Récupérer le PDF généré |
+| GET     | /health | Vérification de la santé (DB, Redis, queue) |
+| GET     | /metrics | Mètres Prometheus |
+
+## Installation / Déploiement
+
+1. Cloner le repo :
+```bash
+git clone <ton_repo_url>
+cd doc-generator-api
+
+docker-compose up --build
